@@ -1,5 +1,6 @@
 youtube_dl
-discord.py==0.16.8
+discord.py
 aiohttp
 websockets
 chardet
+PynaCl
