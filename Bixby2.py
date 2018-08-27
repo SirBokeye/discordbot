@@ -66,4 +66,4 @@ async def play(ctx, url):
 	players[server.id] = player
 	player.start()
 
-client.run('NDgzMzc1NjQ3NTgyOTc4MDYw.DmTZew.ByMt0nxzgNghZ6HZJQFw9Bn5mB4')
+client.run('TOKEN')
