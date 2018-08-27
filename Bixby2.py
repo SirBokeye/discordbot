@@ -7,12 +7,12 @@ from discord.ext.commands import Bot
 from discord.ext import commands
 from discord.voice_client import VoiceClient
 
-Client = discord.Client() #Initialise Client 
-client = commands.Bot(command_prefix = "!") #Initialise client bot
+bot = discord.Client() #Initialise Client 
+bot = commands.Bot(command_prefix = "!") #Initialise client bot
 
 players = {}
 
-@client.event 
+@bot.event 
 async def on_ready():
     print("Bixby werkt!")
 
@@ -68,4 +68,4 @@ async def play(ctx, url):
 	players[server.id] = player
 	player.start()
 
-client.run(os.getenv('TOKEN'))
+bot.run(os.getenv('TOKEN'))
