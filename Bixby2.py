@@ -1,7 +1,6 @@
 import discord
 import asyncio
 import time
-import youtube_dl
 from discord.ext.commands import Bot
 from discord.ext import commands
 from discord.voice_client import VoiceClient
@@ -57,14 +56,5 @@ async def leave(ctx):
     server = ctx.message.server
     voice_client = client.voice_client_in(server)
     await voice_client.disconnect()
-
-@client.command(pass_context=True)
-async def play(ctx, url):
-	server = ctx.message.server
-	voice_client = client.voice_client_in(server)
-	player = await voice_client.create_ytdl_player(url)
-	players[server.id] = player
-	player.start()
-
 
 client.run('TOKEN')
