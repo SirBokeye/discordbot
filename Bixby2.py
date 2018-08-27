@@ -17,9 +17,9 @@ async def on_ready():
     print("Bixby werkt!")
 
 async def on_message(message):
-   if message.content.startswith('!cookie'):
-	msg = 'Lekker een sappig koekje'.format(message)
-      	await client.send_message(message.channel, ":cookie:")
+if message.content.startswith('!cookie'):
+    msg = 'Lekker een sappig koekje'.format(message)
+    await client.send_message(message.channel, ":cookie:")
         
     if message.content == "BOK.":
         await client.send_message(message.channel, ":goat:") 
