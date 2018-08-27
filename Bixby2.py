@@ -6,7 +6,6 @@ import os
 from discord.ext.commands import Bot
 from discord.ext import commands
 from discord.voice_client import VoiceClient
-import commands
 
 Client = discord.Client() #Initialise Client 
 client = commands.Bot(command_prefix = "!") #Initialise client bot
