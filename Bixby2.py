@@ -67,4 +67,4 @@ async def play(ctx, url):
 	player.start()
 
 
-client.run(os.getenv('TOKEN')) 
+client.run('TOKEN')
