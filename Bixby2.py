@@ -2,6 +2,7 @@ import discord
 import asyncio
 import time
 import youtube_dl
+import os
 from discord.ext.commands import Bot
 from discord.ext import commands
 from discord.voice_client import VoiceClient
@@ -66,4 +67,4 @@ async def play(ctx, url):
 	players[server.id] = player
 	player.start()
 
-client.run('TOKEN')
+client.run(os.getenv('TOKEN'))
