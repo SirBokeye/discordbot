@@ -19,7 +19,7 @@ async def on_ready():
 async def on_message(message):
     if message.content.startswith('!cookie'):
 	msg = 'Lekker een sappig koekje'.format(message)
-        await client.send_message(message.channel, ":cookie:")
+       await client.send_message(message.channel, ":cookie:")
 
         
 @client.command(pass_context=True)
