@@ -49,18 +49,18 @@ async def on_message(message):
         userID = message.author.id
         await client.send_message(message.channel, "<@%s> Hi!" % (userID))
         
-@commands.command(pass_context=True)
+client.command(pass_context=True)
 async def join(ctx):
     channel = ctx.message.author.voice.voice_channel
     await client.join_voice_channel(channel)
 
-@commands.command(pass_context=True)
+client.command(pass_context=True)
 async def leave(ctx):
     server = ctx.message.server
     voice_client = client.voice_client_in(server)
     await voice_client.disconnect()
     
-@commands.command(pass_context=True)
+client.command(pass_context=True)
 async def play(ctx, url):
 	server = ctx.message.server
 	voice_client = client.voice_client_in(server)
