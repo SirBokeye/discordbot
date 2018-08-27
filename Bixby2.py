@@ -16,6 +16,7 @@ players = {}
 async def on_ready():
     print("Bixby werkt!")
 
+@client.command(pass_context=True)
 async def on_message(message):
     if message.content == "cookie":
         await client.send_message(message.channel, ":cookie:")
