@@ -16,9 +16,9 @@ players = {}
 async def on_ready():
     print("Bixby werkt!")
 
-@client.command(pass_context=True)
 async def on_message(message):
-    if message.content == "cookie":
+    if message.content.startswith('.cookie')
+	msg = 'Lekker een sappig koekje'.format(message)
         await client.send_message(message.channel, ":cookie:")
         
     if message.content == "BOK.":
