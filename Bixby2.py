@@ -57,4 +57,4 @@ async def leave(ctx):
     voice_client = client.voice_client_in(server)
     await voice_client.disconnect()
 
-client.run(os.getenv('TOKEN'))
+client.run('TOKEN')
