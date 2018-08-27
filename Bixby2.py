@@ -12,7 +12,7 @@ client = commands.Bot(command_prefix = "!") #Initialise client bot
 
 players = {}
 
-@bot.event 
+@client.event 
 async def on_ready():
     print("Bixby werkt!")
 
@@ -49,18 +49,18 @@ async def on_message(message):
         userID = message.author.id
         await client.send_message(message.channel, "<@%s> Hi!" % (userID))
         
-@bot.command(pass_context=True)
+@commands.command(pass_context=True)
 async def join(ctx):
     channel = ctx.message.author.voice.voice_channel
     await client.join_voice_channel(channel)
 
-@bot.command(pass_context=True)
+@commands.command(pass_context=True)
 async def leave(ctx):
     server = ctx.message.server
     voice_client = client.voice_client_in(server)
     await voice_client.disconnect()
     
-@bot.command(pass_context=True)
+@commands.command(pass_context=True)
 async def play(ctx, url):
 	server = ctx.message.server
 	voice_client = client.voice_client_in(server)
